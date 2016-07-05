@@ -24,4 +24,10 @@ class TestHasher < Minitest::Test
 
     assert_equal h1, h2
   end
+  def test_hashed_value
+    object1 = 'Jon Snow'
+    sha_hash = '90b42fa5eea5ea395d03ab45e2ae2b3c167df096b6115b9895159b4fe0b2ded6'
+    h1 = @hasher_class.generate(object1)
+    assert_equal sha_hash, h1
+  end
 end

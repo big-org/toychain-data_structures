@@ -1,7 +1,8 @@
+require 'digest'
 module ToyChain
   class Hasher
     def self.generate(object)
-      object.hash
+      Digest::SHA256.hexdigest object
     end
   end
 end

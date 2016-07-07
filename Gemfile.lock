@@ -5,6 +5,7 @@ GEM
     builder (3.2.2)
     coderay (1.1.1)
     ffi (1.9.10)
+    ffi (1.9.10-x64-mingw32)
     formatador (0.2.5)
     guard (2.14.0)
       formatador (>= 0.2.4)
@@ -51,6 +52,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   guard

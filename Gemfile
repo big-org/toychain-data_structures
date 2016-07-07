@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
-
 gem 'rake', '~> 10.4', '>= 10.4.2'
 
 group :development, :test do

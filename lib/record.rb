@@ -1,3 +1,5 @@
+require_relative './hasher.rb'
+
 module ToyChain
   class Record
     attr_reader :blob
@@ -7,7 +9,7 @@ module ToyChain
     end
 
     def hash_pointer
-      3
+      ToyChain::Hasher.generate(@blob)
     end
   end
 end

@@ -24,4 +24,5 @@ class TestRecord < Minitest::Test
   def test_hash_pointer_is_unique
     assert_equal @record_class.new(blob: @blob).hash_pointer, @record.hash_pointer
   end
+
 end

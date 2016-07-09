@@ -11,5 +11,9 @@ module ToyChain
     def hash_pointer
       ToyChain::Hasher.generate(@blob)
     end
+
+    def serialize_record
+      self.blob.to_s + ":" + self.hash_pointer
+    end
   end
 end

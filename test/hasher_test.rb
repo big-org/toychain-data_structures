@@ -4,6 +4,8 @@ require 'digest'
 
 class TestHasher < Minitest::Test
   def setup
+    @integer = 2
+    @integer_string = @integer.to_s
     @hasher_class = ToyChain::Hasher
     @object = 'Object'
   end
@@ -35,4 +37,7 @@ class TestHasher < Minitest::Test
     assert_equal sha_hash, h1
   end
 
+  def test_non_string_inputs
+    assert_equal @hasher_class.generate(@integer), @hasher_class.generate(@integer_string)
+  end
 end

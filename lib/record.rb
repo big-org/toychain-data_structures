@@ -8,12 +8,16 @@ module ToyChain
       @blob = blob
     end
 
-    def hash_pointer
+    def hash_id
       ToyChain::Hasher.generate(@blob)
     end
 
     def serialize_record
-      self.blob.to_s + ":" + self.hash_pointer
+      blob.to_s + ":" + hash_id
+    end
+
+    def <=>(other)
+      hash_id <=> other.hash_id
     end
   end
 end

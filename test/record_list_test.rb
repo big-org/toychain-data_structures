@@ -9,16 +9,16 @@ class TestRecords < Minitest::Test
   end
 
   def test_if_sorted_set
-    assert @rl.ancestors.include?(Array)
+    assert @rl.ancestors.include?(SortedSet)
   end
 
   def test_constructor_can_accept_blob
-    list = @rl
-      .new(blobs: @blobs)
-      .map { |r| r }
+    blobset = @rl
+      .new(@blobs)
+      .each { |r| r }
 
-    assert_equal @blobs.length, list.length
-    assert list.all? { |record| record.is_a?(ToyChain::Record) }
+    assert_equal @blobs.length, blobset.length 
+    assert blobset.all? { |record| record.is_a?(ToyChain::Record) }
   end
 end
 

@@ -44,4 +44,8 @@ class TestRecord < Minitest::Test
 
     assert_equal array_of_hashes, array_of_records
   end
+
+  def test_records_with_same_blobs_return_true_on_comparison
+    assert_equal @rc.new(blob: @blob), @rc.new(blob: @blob)
+  end
 end

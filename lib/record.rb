@@ -19,5 +19,9 @@ module ToyChain
     def <=>(other)
       hash_id <=> other.hash_id
     end
+
+    def ==(other)
+      hash_id == other.hash_id
+    end
   end
 end

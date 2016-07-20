@@ -1,4 +1,5 @@
 require 'digest'
+
 module ToyChain
   class Hasher
     def self.generate(object)

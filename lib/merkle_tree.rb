@@ -21,18 +21,20 @@ module ToyChain
         .first
     end
 
-    def power_of_two
-      Math
-        .log2(length)
-        .ceil
-    end
-
     def length
       @record_list.length
     end
 
     def hashes
       @hashes ||= pad!
+    end
+
+    private
+
+    def power_of_two
+      Math
+        .log2(length)
+        .ceil
     end
 
     def pad!

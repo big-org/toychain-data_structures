@@ -1,13 +1,13 @@
 # ToyChain
 
-TC is an attempt to implement a toy version of blockchain.
+ToyChain is an attempt to implement a toy version of blockchain.
 
 ## Progress
 
 - [x] Record
 - [x] RecordList
+- [x] Merkle Tree
 - [ ] Block
-- [ ] Merkle Tree
 - [ ] Gossip Protocol
 
 ## Development
@@ -21,4 +21,6 @@ TC is an attempt to implement a toy version of blockchain.
 ## Contribution
 
 - Code on separate branch with your username & issue PR.
-- Try to stick with Git Flow.
+- Try to stick with [Git Flow][gf].
+
+[gf]: https://github.com/nvie/gitflow

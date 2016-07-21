@@ -1,5 +1,7 @@
 test_files = Dir.glob('./test/*_test.rb')
 
+task :default => :test
+
 desc "Test individual file or all files"
 task :test, :file_name do |t, args|
   test_files

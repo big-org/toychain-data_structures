@@ -2,6 +2,10 @@
 
 ToyChain is an attempt to implement a toy version of blockchain.
 
+## Status
+
+![Build Status][travis]
+
 ## Progress
 
 - [x] Record
@@ -24,3 +28,4 @@ ToyChain is an attempt to implement a toy version of blockchain.
 - Try to stick with [Git Flow][gf].
 
 [gf]: https://github.com/nvie/gitflow
+[travis]: https://travis-ci.org/big-org/toychain-record.svg?branch=master

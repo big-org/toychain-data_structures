@@ -1,6 +1,24 @@
-# ToyChain: Record
+# ToyChain
 
+TC is an attempt to implement a toy version of blockchain.
 
-This is the record datatype for the Toy Chain system. 
-This is a hash pointer that simply has a data blob and a hash pointer. 
+## Progress
 
+- [x] Record
+- [x] RecordList
+- [ ] Block
+- [ ] Merkle Tree
+- [ ] Gossip Protocol
+
+## Development
+
+- Clone project
+- `gem install`
+- `rake -T` lists available commands
+- `rake test` runs all tests
+- `rake watch` runs tests on file change
+
+## Contribution
+
+- Code on separate branch with your username & issue PR.
+- Try to stick with Git Flow.

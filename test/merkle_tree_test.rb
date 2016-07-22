@@ -49,7 +49,7 @@ module ToyChain
       ]
       list = RecordList.new(blobs: array)
       hash_array = array.map { |b| Hasher.generate(b) }.sort
-      padded_array = hash_array + [PADDER]
+      padded_array = hash_array + [BALANCER]
 
       second_layer = []
       second_layer << combined_hash(*padded_array[0..1])
@@ -92,7 +92,7 @@ module ToyChain
       list = RecordList.new(blobs: array)
 
       hash_array = array.map { |b| Hasher.generate(b) }.sort
-      padded_array = hash_array + [PADDER] * 3
+      padded_array = hash_array + [BALANCER] * 3
 
       third_layer = []
       third_layer << combined_hash(*padded_array[0..1])

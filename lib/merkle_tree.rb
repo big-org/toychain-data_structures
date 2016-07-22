@@ -1,7 +1,7 @@
 require_relative './record_list.rb'
 
 module ToyChain
-  PADDER = 0
+  BALANCER = 0
 
   class MerkleTree
     def initialize(record_list:)
@@ -42,7 +42,7 @@ module ToyChain
         .map(&:hash_id)
 
       pad = 2**power_of_two - length
-      just_hashes + [PADDER] * pad
+      just_hashes + [BALANCER] * pad
     end
   end
 end

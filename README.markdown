@@ -30,4 +30,4 @@ This is an attempt to implement all the data structures of blockchain.
 - Try to stick with [Git Flow][gf].
 
 [gf]: https://github.com/nvie/gitflow
-[travis]: https://travis-ci.org/big-org/toychain-data_structures.svg?branch=master
+[travis]: https://travis-ci.org/JikkuJose/toychain-data_structures.svg?branch=master

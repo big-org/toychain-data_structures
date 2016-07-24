@@ -1,6 +1,6 @@
-# ToyChain
+# ToyChain Data Structures
 
-ToyChain is an attempt to implement a toy version of blockchain.
+This is an attempt to implement all the data structures of blockchain.
 
 ## Status
 
@@ -28,4 +28,4 @@ ToyChain is an attempt to implement a toy version of blockchain.
 - Try to stick with [Git Flow][gf].
 
 [gf]: https://github.com/nvie/gitflow
-[travis]: https://travis-ci.org/big-org/toychain-record.svg?branch=master
+[travis]: https://travis-ci.org/big-org/toychain-data_structures.svg?branch=master

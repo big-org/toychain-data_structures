@@ -24,7 +24,9 @@ This is an attempt to implement all the data structures of blockchain.
 
 ## Contribution
 
-- Code on separate branch with your username & issue PR.
+- Fork
+- Code
+- Issue PR
 - Try to stick with [Git Flow][gf].
 
 [gf]: https://github.com/nvie/gitflow

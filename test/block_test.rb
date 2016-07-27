@@ -17,6 +17,7 @@ module ToyChain
       ].each do |accessor|
         assert @block.new(
           record_list: @rl,
+          previous_hash: nil,
           difficulty: @difficulty
         )
           .respond_to?(accessor)
@@ -26,6 +27,7 @@ module ToyChain
     def test_block_accepts_record_list_and_difficulty
       assert @block.new(
         record_list: @rl,
+        previous_hash: nil,
         difficulty: @difficulty
       )
     end

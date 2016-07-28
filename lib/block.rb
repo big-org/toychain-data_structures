@@ -1,6 +1,6 @@
 module ToyChain
   class Block
-    def initialize(record_list:, previous_hash:, difficulty:)
+    def initialize(record_list:, previous_hash:, difficulty:, version:)
     end
 
     def header

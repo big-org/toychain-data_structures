@@ -8,6 +8,7 @@ module ToyChain
       @blobs = [1, 'Hey']
       @rl = RecordList.new(blobs: @blobs)
       @difficulty = 2
+      @version = '0.0.1'
     end
 
     def test_block_has_required_accessors
@@ -18,17 +19,19 @@ module ToyChain
         assert @block.new(
           record_list: @rl,
           previous_hash: nil,
-          difficulty: @difficulty
+          difficulty: @difficulty,
+          version: @version
         )
           .respond_to?(accessor)
       end
     end
 
-    def test_block_accepts_record_list_and_difficulty
+    def test_block_accepts_few_arguments
       assert @block.new(
         record_list: @rl,
         previous_hash: nil,
-        difficulty: @difficulty
+        difficulty: @difficulty,
+        version: @version
       )
     end
   end

@@ -1,4 +1,5 @@
 require_relative './hasher.rb'
+require_relative './serializer.rb'
 
 module ToyChain
   class Record
@@ -9,7 +10,7 @@ module ToyChain
     end
 
     def hash_id
-      ToyChain::Hasher.generate(@blob)
+      ToyChain::Hasher.generate(object: @blob, serializer: Serializer)
     end
 
     def serialize_record

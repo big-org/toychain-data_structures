@@ -23,6 +23,7 @@ module ToyChain
     end
 
     def set_nonce(nonce)
+      @header.set_nonce(nonce)
     end
   end
 end

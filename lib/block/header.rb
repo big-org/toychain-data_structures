@@ -10,9 +10,12 @@ module ToyChain
       version:,
       time_stamp:,
       previous_hash:,
-      nonce:,
       difficulty:
     )
+    end
+
+    def set_nonce(nonce)
+      @nonce = nonce
     end
   end
 end

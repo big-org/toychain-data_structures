@@ -7,17 +7,17 @@ module ToyChain
       :version,
       :time_stamp,
       :previous_hash,
-      :nonce,
       :difficulty
     ]
 
     def setup
+      @nonce = 'NONCE'
+
       @header = Header.new(
-      version: 'v0.0.1-test_version',
-      time_stamp: '2016-07-22 15:42:10 UTC',
-      previous_hash: 'PREVIOUS HASH',
-      nonce: 'RANDOM VALUE',
-      difficulty: 12
+        version: 'v0.0.1-test_version',
+        time_stamp: '2016-07-22 15:42:10 UTC',
+        previous_hash: 'PREVIOUS HASH',
+        difficulty: 12
       )
     end
 
@@ -25,6 +25,11 @@ module ToyChain
       STANDARD_ACCESSORS.each do |accessor|
         assert @header.respond_to?(accessor)
       end
+    end
+
+    def test_for_set_nonce
+      @header.set_nonce(@nonce)
+      assert_equal @nonce, @header.nonce
     end
   end
 end

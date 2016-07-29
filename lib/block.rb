@@ -1,4 +1,6 @@
 require_relative './block/header.rb'
+require_relative './serializer.rb'
+require_relative './hasher.rb'
 
 module ToyChain
   class Block
@@ -20,6 +22,7 @@ module ToyChain
     end
 
     def hash_id
+      Hasher.generate(object: self, serializer: Serializer)
     end
 
     def set_nonce(nonce)

@@ -10,6 +10,7 @@ module ToyChain
       version = '0.0.1'
       p_hash = 'PREVIOUS_HASH'
       @nonce = 'RANDOM_VALUE'
+      @different_nonce = 'DIFFERENT_RANDOM_VALUE'
       difficulty = 2
 
       @h = Header
@@ -37,6 +38,26 @@ module ToyChain
         time_stamp: time_stamp
       )
       @block1.set_nonce(@nonce)
+
+      @block2 = @block.new(
+        record_list: [],
+        previous_hash: p_hash,
+        difficulty: difficulty,
+        version: version,
+        time_stamp: time_stamp
+      )
+
+      @block2.set_nonce(@nonce)
+
+      @block3 = @block.new(
+        record_list: [],
+        previous_hash: p_hash,
+        difficulty: difficulty,
+        version: version,
+        time_stamp: time_stamp
+      )
+
+      @block3.set_nonce(@different_nonce)
     end
 
     def test_block_has_required_accessors
@@ -77,6 +98,11 @@ module ToyChain
 
     def test_set_nonce
       assert_equal @nonce, @block1.header.nonce
+    end
+
+    def test_hash_ids
+      assert_equal @block2.hash_id, @block1.hash_id
+      refute_equal @block3.hash_id, @block1.hash_id
     end
   end
 end

@@ -11,7 +11,7 @@ This is an attempt to implement all the data structures of blockchain.
 - [x] Record
 - [x] RecordList
 - [x] Merkle Tree
-- [ ] Block
+- [x] Block
 - [ ] Gossip Protocol
 
 ## Development

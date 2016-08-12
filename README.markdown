@@ -10,9 +10,9 @@ This is an attempt to implement all the data structures of blockchain.
 
 - [x] Record
 - [x] RecordList
-- [x] Merkle Tree
 - [x] Block
-- [ ] Gossip Protocol
+- [x] Serializer
+- [x] Message
 
 ## Development
 

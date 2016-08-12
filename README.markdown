@@ -10,9 +10,9 @@ This is an attempt to implement all the data structures of blockchain.
 
 - [x] Record
 - [x] RecordList
-- [x] Merkle Tree
-- [ ] Block
-- [ ] Gossip Protocol
+- [x] Block
+- [x] Serializer
+- [x] Message
 
 ## Development
 
@@ -24,8 +24,10 @@ This is an attempt to implement all the data structures of blockchain.
 
 ## Contribution
 
-- Code on separate branch with your username & issue PR.
+- Fork
+- Code
+- Issue PR
 - Try to stick with [Git Flow][gf].
 
 [gf]: https://github.com/nvie/gitflow
-[travis]: https://travis-ci.org/big-org/toychain-data_structures.svg?branch=master
+[travis]: https://travis-ci.org/JikkuJose/toychain-data_structures.svg?branch=master

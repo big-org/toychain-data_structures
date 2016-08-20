@@ -1,4 +1,4 @@
-test_files = Dir.glob('./test/*/*_test.rb')
+test_files = Dir.glob('./test/*/*_test.rb') + Dir.glob('./test/*_test.rb')
 
 task :default => :test
 

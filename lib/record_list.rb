@@ -16,8 +16,8 @@ module ToyChain
     def find_index_for_inserting(record)
       index = 0
       while (index < self.length)
-        r = self[index]
-        break if record.hash_id < r.hash_id
+        current_record = self[index]
+        break if record.hash_id < current_record.hash_id
         index += 1
       end
       index

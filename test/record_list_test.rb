@@ -5,11 +5,16 @@ require_relative '../lib/record.rb'
 class TestRecords < Minitest::Test
   def setup
     @rl = ToyChain::RecordList
-    @blobs = [1, 'Nikhil', 'Rakesh']
+    @blobs = ['Nikhil', 4,'A', '23', 'Rakesh', 1, 2, 10, "ABD", "Test"]
     @blob = 'Individual Blob'
     @record_from_blob = ToyChain::Record.new(blob: @blob)
 
     @rl_blobs = ToyChain::RecordList.new(blobs: @blobs)
+
+    @rl_pushed = ToyChain::RecordList.new(blobs: [])
+    @blobs.each do |b|
+      @rl_pushed.push(b)
+    end
 
     @sorted_blob_hashes = @blobs
       .map { |b| ToyChain::Record.new(blob: b) }
@@ -36,8 +41,12 @@ class TestRecords < Minitest::Test
     assert_equal @record_from_blob, rl_instance.last
   end
 
-  def test_records_are_recived_in_sorted_order
+  def test_records_are_received_in_sorted_order
     assert_equal @rl_blobs, @sorted_blob_hashes
+  end
+
+  def test_records_are_pushed_in_sorted_order
+    assert_equal @rl_pushed, @sorted_blob_hashes
   end
 end
 

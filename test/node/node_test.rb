@@ -22,9 +22,5 @@ module ToyChain
       assert @n.configuration
     end
 
-    #def test_node_can_recieve_message
-
-    #end
-
   end
 end

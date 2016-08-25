@@ -1,5 +1,5 @@
 require_relative './test_helper.rb'
-require_relative '../lib/message.rb'
+require 'message.rb'
 
 module ToyChain
 class TestMessage < Minitest::Test

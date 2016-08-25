@@ -1,7 +1,8 @@
 require_relative './test_helper.rb'
-require_relative '../lib/hasher.rb'
-require_relative '../lib/serializer.rb'
+require 'hasher.rb'
+require 'serializer.rb'
 require 'digest'
+
 
 module ToyChain
   class TestHasher < Minitest::Test

@@ -1,5 +1,5 @@
 require_relative './test_helper.rb'
-require_relative '../lib/serializer.rb'
+require 'serializer.rb'
 
 module ToyChain
   class TestSerializer < Minitest::Test

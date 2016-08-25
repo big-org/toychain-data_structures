@@ -1,5 +1,5 @@
 require_relative './test_helper.rb'
-require_relative '../lib/block/header.rb'
+require 'block/header.rb'
 
 module ToyChain
   class TestHeader < Minitest::Test

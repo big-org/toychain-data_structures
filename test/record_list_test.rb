@@ -1,6 +1,6 @@
 require_relative './test_helper.rb'
-require_relative '../lib/record_list.rb'
-require_relative '../lib/record.rb'
+require 'record_list.rb'
+require 'record.rb'
 
 class TestRecords < Minitest::Test
   def setup

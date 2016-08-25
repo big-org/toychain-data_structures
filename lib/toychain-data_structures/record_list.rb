@@ -8,8 +8,19 @@ module ToyChain
     end
 
     def push(blob)
-      super Record.new(blob: blob)
-      sort!
+      record = Record.new(blob: blob)
+      index_for_insertion = find_index_for_inserting(record)
+      self.insert(index_for_insertion, record)
+    end
+
+    def find_index_for_inserting(record)
+      index = 0
+      while (index < self.length)
+        current_record = self[index]
+        break if record.hash_id < current_record.hash_id
+        index += 1
+      end
+      index
     end
   end
 end

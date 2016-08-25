@@ -1,5 +1,5 @@
 require_relative './lib/toychain-data_structures/version.rb'
-test_files = Dir.glob('./test/*_test.rb')
+test_files = Dir.glob('./test/*/*_test.rb') + Dir.glob('./test/*_test.rb')
 
 gem_name = 'toychain-data_structures'
 gem_version = ToyChain::DataStructures::VERSION

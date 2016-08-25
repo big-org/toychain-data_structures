@@ -1,13 +1,14 @@
 require_relative '../test_helper.rb'
-require_relative '../../lib/message_pool.rb'
-require_relative '../../lib/node/node.rb'
+require 'message_pool.rb'
+require 'node.rb'
 
 module ToyChain
   class TestNode < Minitest::Test
     def setup
       @message_pool = MessagePool
       @node = Node
-      @n = @node.new(config_file: './lib/node/node_config.json')
+      config_file = './lib/toychain-data_structures/node/node_config.json'
+      @n = @node.new(config_file: config_file)
     end
 
     def test_create

@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../message_pool.rb'
+require_relative './message_pool.rb'
 
 module ToyChain
   class Node

@@ -1,7 +1,7 @@
 require_relative './test_helper.rb'
-require_relative '../lib/message_pool.rb'
-require_relative '../lib/message.rb'
-require_relative '../lib/record.rb'
+require 'message_pool.rb'
+require 'message.rb'
+require 'record.rb'
 
 class TestMessagePool < Minitest::Test
   def setup
@@ -13,7 +13,7 @@ class TestMessagePool < Minitest::Test
   def test_if_subclass_of_array
     assert @mp.ancestors.include?(Array)
   end
-  
+
   def test_individual_blobs_can_be_pushed
     mp_instance = @mp
       .new()
@@ -21,5 +21,4 @@ class TestMessagePool < Minitest::Test
 
     assert_equal @msg, mp_instance.last
   end
- 
 end

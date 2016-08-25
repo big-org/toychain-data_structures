@@ -1,7 +1,7 @@
 require_relative './test_helper.rb'
-require_relative '../lib/message.rb'
-require_relative '../lib/hasher.rb'
-require_relative '../lib/serializer.rb'
+require 'message.rb'
+require 'hasher.rb'
+require 'serializer.rb'
 
 module ToyChain
 class TestMessage < Minitest::Test
@@ -10,9 +10,9 @@ class TestMessage < Minitest::Test
     @record = Record.new(blob: blob)
   end
 
-  def test_message_hash 
+  def test_message_hash
     msg = Message.new(record: @record)
-    assert ToyChain::Hasher.generate(object: msg, serializer: Serializer), msg.hash_id 
+    assert ToyChain::Hasher.generate(object: msg, serializer: Serializer), msg.hash_id
   end
 
   def test_message_can_be_initiated_with_record

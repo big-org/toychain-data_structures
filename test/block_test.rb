@@ -1,7 +1,7 @@
 require_relative './test_helper.rb'
-require_relative '../lib/block.rb'
-require_relative '../lib/serializer.rb'
-require_relative '../lib/block/header.rb'
+require 'block.rb'
+require 'serializer.rb'
+require 'block/header.rb'
 
 module ToyChain
   class TestBlock < Minitest::Test
